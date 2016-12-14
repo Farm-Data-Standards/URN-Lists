@@ -31,7 +31,7 @@ The lexical equivalence of the NZL namespace-specific strings (NSSs) is defined 
 * Any identifier in NZL namespaces can be compared using the normal mechanisms for percent-encoded UTF-8 strings.
 * The use of diacritic marks such as Maori macrons in identifiers is supported as described in RFC-4350.
 
-##Table of Existing Namespace Objects
+##Sample of Existing Namespace Objects
 Below are listed the existing Namespaces used primarily for the Animal Data Standards and DataLinker. Note that the processor URN is also included. There are further URN’s for each individual animal data standard attribute, which can be viewed in GitHub.
 Further classes can be proposed to the Declared Registrant of the urn:nzl:pri:namespace (contact details above). It is expected, for example, that plant specific classes may be added.
 
