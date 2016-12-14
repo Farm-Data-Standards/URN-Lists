@@ -76,4 +76,4 @@ Further classes can be proposed to the Declared Registrant of the urn:nzl:pri:na
 
 * **urn:nzl:pri:animal:dna:result** - This schema describes the dna result values for an animal,  including animallID, dnaProbability, and dnaSireId.
 
-* **urn:nzl:pri:Processor** - Processing plants. These are identifier codes used to describe a processing plant.
+* **urn:nzl:pri:processor** - Processing plants. These are identifier codes used to describe a processing plant.
