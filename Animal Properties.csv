@@ -1,0 +1,255 @@
+Object,Property,Property URN,Description,Owner
+animal.Identity,AnimalID,urn:nzl:pri:animal:id:,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,IDState,urn:nzl:pri:animal:id:IdState,"State of the animalID (enumeration: birth,current, historic).",Farm Data Standards
+,validFrom,urn:nzl:pri:animal:id:validFrom,ID's start date (optional).,Farm Data Standards
+,validThrough,urn:nzl:pri:animal:id:validThrough,ID's end date (optional).,Farm Data Standards
+,idType,urn:nzl:pri:animal:id:idType,"Type of animal identifer. Valid values are official, management, electronic. Each animal identifier SHOULD  also specify the type of identifier (Official, Management, and/or Electronic) so that a receiving system which is unable to interpret namespaces may use a generic method to interpret the identifier.",Farm Data Standards
+animal.Location,location ,urn:nzl:pri:loc,URN identifier for the location of the animal.,Farm Data Standards
+,locationState    ,urn:nzl:pri:loc:LocState    ,"enumeration: original (birth), current (moved), historic",Farm Data Standards
+,validFrom    ,urn:nzl:pri:loc:validFrom    ,Location start date (optional).,Farm Data Standards
+,validThrough   ,urn:nzl:pri:loc:validThrough   ,Location end date (optional).,Farm Data Standards
+,birthLocation,urn:nzl:pri:loc:birthLoc,Location identifier usng a URN-based identification string containing namespace and unique identifier within the namespace.,Farm Data Standards
+animal.Herd,herd,urn:nzl:pri:herd,URN identifier for the herd of the animal.,Farm Data Standards
+,herdState,urn:nzl:pri:herd:herdState,"enumeration: original (birth), current (moved), historic",Farm Data Standards
+,validFrom    ,urn:nzl:pri:herd:validFrom    ,Herd start date (optional).,Farm Data Standards
+,validThrough   ,urn:nzl:pri:herd:validThrough   ,Herd end date (optional).,Farm Data Standards
+animal.Life,AnimalID,urn:nzl:pri:animal:life:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,birthDate,urn:nzl:pri:animal:life:birthDate,Date on which animal was born,Farm Data Standards
+,birthDateConfidence,urn:nzl:pri:animal:life:birthDateConf,"3 character string with positional charcters representing Year Month Date (YMD). Values are A  accurate, E  estimate, U  unknown (value=A, E or U) EG. AEU means Year Accurate, Month Estimated and Date Unknown",Farm Data Standards
+,birthRank,urn:nzl:pri:animal:life:birthRank,"Describes number of progeny born to dam in a single birth event. values are 0 if the animal is born dead, 1 if the animal is a singleton, 2 if it is one of twins, etc. Positive integer or NULL if unknown",Farm Data Standards
+,birthCohort,urn:nzl:pri:animal:life:birthCohort,"Describes the season (spring/autumn) within the birth year into which animals are categorised. This is most likely derived or calculated from the birth date. As seasons vary around the world (including variations with 2, 4, 6, or 12 cohorts), a cohort number is used to interchange this data.",Farm Data Standards
+,birthYear,urn:nzl:pri:animal:life:birthYear,Known as YearBorn in many systems. Derived from Birth Date where available.,
+,preBirthMob,urn:nzl:pri:animal:life:preBirthMob,Mob ewe prior to lambing,Farm Data Standards
+,postBirthMob,urn:nzl:pri:animal:life:postBirthMob,Mob ewe paost lambing,Farm Data Standards
+,fate,urn:nzl:pri:animal:life:fate,"Describes the status of an animal as recorded in the Provider system at time of data transfer. Usually  'Alive' or 'Dead', but can include other 'status' information such as 'Culled' and 'Sold'.",Farm Data Standards
+,sex,urn:nzl:pri:animal:life:sex,"The gender or sex of the animal. This may be combined with state information to indicate the fertility status of the animal. enumeration: Male or Female. NULL  for unknowns.
+",Farm Data Standards
+,breedAssessed,urn:nzl:pri:animal:life:breedAssessed,"Visual assessment of animal's primary or major breed. Known as ""Breed"" in many systems.",Farm Data Standards
+,breeds,urn:nzl:pri:animal:life:breeds,"Breed (enumerations) and breed proportion (in terms relative to the Breed Distribution Denominator, “Sixteenths”, “SixtyFourths”, or “Percentage”). A two-dimensional matrix of breed identifiers and the proportion of each breed in the animal (calculated from
+its parent’s breed components). SIL currently uses percentages, and the NZ Dairy Databases use 16ths, e.g. F8J8 (Friesian 8, Jersey 8). We
+have also seen systems use 64ths. ",Farm Data Standards
+,breedDistributionDenominator,urn:nzl:pri:animal:life:breedDistDenom,"Describes the basis for the proportion of each breed expressed in the breedDistribution. Enumeration: 16, 64, 100.",Farm Data Standards
+,visualColour,urn:nzl:pri:animal:life:visualColour,Visually assessed colour of the animal,Farm Data Standards
+,speciesBinomialName,urn:nzl:pri:animal:life:speciesBinomialName,"Combines Genus and Species. Genus is capitalised eg ""Bos taurus""",Farm Data Standards
+,speciesCommonName,urn:nzl:pri:animal:life:speciesCommonName,"Common term for species. Enumeration: Cattle, Deer, Goats, Sheep",Farm Data Standards
+,breedSocSECode,urn:nzl:pri:animal:life:breedSocSECode,Breed Society Single Entry Code,Farm Data Standards
+,breedSocietyRegStatus,urn:nzl:pri:animal:life:breedSocietyRegStat,Breed Society Registration Status,Farm Data Standards
+,primaryBreedAbbreviation,urn:nzl:pri:animal:life:primaryBreedAbbrev,"short form e.g. ""Rom""",Farm Data Standards
+animal.State,AnimalID,urn:nzl:pri:animal:state:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,currentLocation,urn:nzl:pri:animal:state:currentLoc,Location identifier usng a URN-based identification string containing namespace and unique identifier within the namespace.,Farm Data Standards
+,disposalMethod,urn:nzl:pri:animal:state:DisposalMethod,"Describes the disposal method for an animal that is dead. Values = HomeKill,Disposed at NAIT Location, Meatprocessor-human consumption, Meat Prociessor - per food, Rendering Facility",Farm Data Standards
+,currentStatus,urn:nzl:pri:animal:state:currentStatus,"Typically describes if the animal is Alive, Dead or in Transit. Also known as ""Status"" in some systems. Reason for Fate should be captured as an observation.",Farm Data Standards
+,fertilityStatus,urn:nzl:pri:animal:state:fertilityStatus,"Indicates whether an animal is known to be fertile or note, or whether it has been partly or fully neutered. For instance, a neutered cattle male is a steer, a neutered sheep male is a wether. Females of both species can be spayed. An infertile male by comparison still has testes and responds as a male, and is frequently used as a “teaser”.",Farm Data Standards
+,lactating,urn:nzl:pri:animal:state:lactating,Describes if animal is lactating at time of data transfer. Note this may change many time over an animal's life.,
+,rearingRank,urn:nzl:pri:animal:state:rearingRank,"Rearing rank is used to indicate the number of progeny reared by the same dam during the same lactation as this has an influence on weights and growth rates. For example, an animal reared as a twin will have a rearing rank of 2. May be Null if unknown, or 0 if born dead.",Farm Data Standards
+,reproductiveStatus,urn:nzl:pri:animal:state:reproStatus,"Describes if the animal is pregnant at the time of data transfer. Note this may change many time over an animal's life.Values = Unknown, Cycling, Not Cycling, Pregnant, Involuting",Farm Data Standards
+,statusDate,urn:nzl:pri:animal:state:statusDate,Date the fate or status last changed.,Farm Data Standards
+,withholdingDateMeat,urn:nzl:pri:animal:state:whDateMeat,Describes the date before which an animal may not enter the food supply chain. May be NULL ,Farm Data Standards
+,withholdingDateMilk,urn:nzl:pri:animal:state:whDateMilk,Describes the date before which an animal may not enter the food supply chain. May be NULL ,Farm Data Standards
+,withholdingDateExport,urn:nzl:pri:animal:state:whDateExport,Describes the dateresulting from export slaughter interval of a treatment. May be NULL ,Farm Data Standards
+animal.Parentage,AnimalID,urn:nzl:pri:animal:parent:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,parentAge,urn:nzl:pri:animal:parent:parentAge,"Calculated age of parent in years at the time animal was born. May be known as ""ageOfDam"" is some systems. Values = NULL if inknown, integer 1-25",Farm Data Standards
+,parentType,urn:nzl:pri:animal:parent:parentType,"This specifies the type of parentage that is claimed: Dam (natural dam), ET Recipient Dam, ET Donor (Genetic) Dam, Rearing Dam (reared, but did not give birth to the progeny), Sire (multiple sire records may be recorded, each with its own DNA probability if DNA testing indicates multiple matches) Excluded Sire (unable to confirm the sire, but definitely not this animal).",Farm Data Standards
+,parentageMethod,urn:nzl:pri:animal:parent:parentMethod,"Documents how parentage was assessed: - Observed (e.g. Dam observed giving birth to progeny)
+- Associated (e.g. Dam seen feeding progeny)
+- Derived (e.g. Sire derived from mating records)
+- DNA (the result of a DNA parentage test)",Farm Data Standards
+,survivetoWeaning,urn:nzl:pri:animal:parent:surviveToWean,"survived to weaning (0,1)",Farm Data Standards
+,birthDamId,urn:nzl:pri:animal:parent:birthDamId,"URN identifier of animal. The parentage properties of an animal can be comprised of a set of elements, including the birth dam, genetic dam, rearing dam, and sireId.",Farm Data Standards
+,geneticDamId,urn:nzl:pri:animal:parent:geneticDamId,"URN identifier of animal. The parentage properties of an animal can be comprised of a set of elements, including the birth dam, genetic dam, rearing dam, and sireId.",Farm Data Standards
+,rearingDamId,urn:nzl:pri:animal:parent:rearingDamId,"URN identifier of animal. The parentage properties of an animal can be comprised of a set of elements, including the birth dam, genetic dam, rearing dam, and sireId.",Farm Data Standards
+,sireId,urn:nzl:pri:animal:parent:sireId,"URN identifier of animal. The parentage properties of an animal can be comprised of a set of elements, including the birth dam, genetic dam, rearing dam, and sireId.",Farm Data Standards
+merit.Herd,herdCodes,urn:nzl:pri:merit:herd:herdCodes,URN identifier for the herd of the animal.,Farm Data Standards
+merit.Analysis,analysisNumber,urn:nzl:pri:merit:analysis:analysisNo,Unique ID for analysis (Where multiple analyses per day).,Farm Data Standards
+,analysisDate,urn:nzl:pri:merit:analysis:analysisDate,Date of merit value analysis.,Farm Data Standards
+,analysisName,urn:nzl:pri:merit:analysis:analysisName,,Farm Data Standards
+merit.Value,AnimalID,urn:nzl:pri:merit:value:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,meritDefinition,urn:nzl:pri:merit:value:meritDef,"Full text definition of the merit being assessed. Merit value types include the breeding, lifetime, and seasonal performance or resilience values of an animal. Examples include  breeding values and breeding indexes, production worth, and lactation worth.",Farm Data Standards
+,meritCode,urn:nzl:pri:merit:value:meritCode,Internal merit value code.,Farm Data Standards
+,meritshortName,urn:nzl:pri:merit:value:meritshortName,Merit code in URN string format.,Farm Data Standards
+,meritfullName,urn:nzl:pri:merit:value:meritfullName,Short name of Merit type in URN string format.,Farm Data Standards
+,accuracy,urn:nzl:pri:merit:value:accuracy,An estimate of an animal's merit index for a trait.,Farm Data Standards
+session,sessionDate,urn:nzl:pri:session:sessionDate,Date at which a session of observations were recorded.,Farm Data Standards
+,sessionName,urn:nzl:pri:session:sessionName,Name of the recorded session.,Farm Data Standards
+session.Animal,AnimalID,urn:nzl:pri:session:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,animalIdentifiers,urn:nzl:pri:session:animalIdents,http://www.datalinker.org/contexts/1.0/AnimalIdentifiers,Farm Data Standards
+,animalData,urn:nzl:pri:session:animalData,http://www.datalinker.org/contexts/1.0/AnimalData,Farm Data Standards
+,observations,urn:nzl:pri:session:observ,http://www.datalinker.org/contexts/1.0/observations,Farm Data Standards
+observation,sessionUrl,urn:nzl:pri:observ:sessionUrl,http://www.datalinker.org/contexts/1.0/SessionUrl,Farm Data Standards
+,herdUrl,urn:nzl:pri:observ:herdUrl,http://www.datalinker.org/contexts/1.0/HerdUrl,Farm Data Standards
+observation.Category,observationCategory,urn:nzl:pri:observ:observCat,Type of observation recorded.,Farm Data Standards
+,observationDate,urn:nzl:pri:observ:observDate,"Date (and depending on observation, time) at which the observation was made. For some events, the time component of the observation is critical (for instance, a Milk Yield observation). For others, (such as condition score), the rate of change is slow enough that time is irrelevant.",Farm Data Standards
+observation.MovementRegistration,AnimalID,urn:nzl:pri:observ:move:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,tagType,urn:nzl:pri:observ:move:tagType,"enumeration: Ear Tag, Inject, Bolus or Tag Attachment",Farm Data Standards
+,ICARProductCode,urn:nzl:pri:observ:move:icarProductCode,see http://www.service-icar.com/manufacturer_complete.php,Farm Data Standards
+,removingTag,urn:nzl:pri:observ:move:removingTag,"boolean: True if tag is removed, default is false",
+,previousAnimalID,urn:nzl:pri:observ:move:previousAnimalId,"Where known, the previous URN of
+the animal. URN string",
+,retaggingReason,urn:nzl:pri:observ:move:retaggingReason,A textual explanation of retagging reason.,Farm Data Standards
+,Fate,urn:nzl:pri:observ:move:fate,"Typically describes if the animal is Alive, Dead or in Transit. Also known as ""Status"" in some systems. Reason for Fate should be captured as an observation.",
+,fateReason,urn:nzl:pri:observ:move:fateReason,Fate Reason is used in the Change Fate observation in the Registration category. enumeration list see B.4 Animal Standard,Farm Data Standards
+,disposalWaybill,urn:nzl:pri:observ:move:disposalWaybill,Waybill or disposal identifier,Farm Data Standards
+,disposalMethod,urn:nzl:pri:observ:move:disposalMethod,Disposal Method is used in the Change Fate observation in the Registration category. ,Farm Data Standards
+,sourceHerdID,urn:nzl:pri:observ:move:sourceHerdId,URN string,Farm Data Standards
+,sourceHerdDispName,urn:nzl:pri:observ:move:sourceHerdDispName,,Farm Data Standards
+,destinationHerdID,urn:nzl:pri:observ:move:destinationHerdId,URN string,Farm Data Standards
+,destinationHerdDispName,urn:nzl:pri:observ:move:destHerdDispName,,Farm Data Standards
+,previousOwnerID,urn:nzl:pri:observ:move:prevOwnerId,URN string,Farm Data Standards
+,previousOwnerDispName,urn:nzl:pri:observ:move:prevOwnerDispName,,Farm Data Standards
+,newOwnerID,urn:nzl:pri:observ:move:newOwnerId,URN string,Farm Data Standards
+,newOwnerDispName,urn:nzl:pri:observ:move:newOwnerDispName,,Farm Data Standards
+,previousLesseeID,urn:nzl:pri:observ:move:prevLesseeId,URN string,Farm Data Standards
+,previousLesseeDispName,urn:nzl:pri:observ:move:prevLesseeDispName,,Farm Data Standards
+,newLesseeID,urn:nzl:pri:observ:move:newLesseeId,,Farm Data Standards
+,newLesseeDispName,urn:nzl:pri:observ:move:newLesseeDispName,,Farm Data Standards
+,changeOwnershipTally,urn:nzl:pri:observ:move:changeOwnerTally,count of animals involved,Farm Data Standards
+,sourceLocationID,urn:nzl:pri:observ:move:sourceLocationId,URN string - location identifier,Farm Data Standards
+,sourceLocationDispName,urn:nzl:pri:observ:move:sourceLocDispName,,Farm Data Standards
+,destinationLocationID,urn:nzl:pri:observ:move:destLocationId,URN string - location identifier,Farm Data Standards
+,destinationLocationDispName,urn:nzl:pri:observ:move:destLocDispName,,Farm Data Standards
+,transportMethod,urn:nzl:pri:observ:move:transportMethod,Transport Method is used in the Change Location observation in the Registration category.,Farm Data Standards
+,transportOperator,urn:nzl:pri:observ:move:transportOperator,,Farm Data Standards
+,transportWaybill,urn:nzl:pri:observ:move:transportWaybill,waybill or transaction ID,Farm Data Standards
+,vehicalID,urn:nzl:pri:observ:move:vehicalId,fleet number or license plate,Farm Data Standards
+,transitTime,urn:nzl:pri:observ:move:transitTime,ISO 8610 period (duration),Farm Data Standards
+,transportTally,urn:nzl:pri:observ:move:transportTally,count of animals involved,Farm Data Standards
+observation.FeedAndGrowth,equipmentModel,urn:nzl:pri:observ:feedgrowth:equipModel,percentage for a group,Farm Data Standards
+,precision,urn:nzl:pri:observ:feedgrowth:precision,weight in kg for a group,Farm Data Standards
+,coefficientOfVariation,urn:nzl:pri:observ:feedgrowth:coefficientOfVar,weight in kg for a group,Farm Data Standards
+,maximumWeight,urn:nzl:pri:observ:feedgrowth:maxWeight,weight in kg for a group,Farm Data Standards
+,meanWeight,urn:nzl:pri:observ:feedgrowth:meanWeight,weight in kg for a group,Farm Data Standards
+,minimumWeight,urn:nzl:pri:observ:feedgrowth:miniWeight,weight in kg for a group,Farm Data Standards
+,standardDeviation,urn:nzl:pri:observ:feedgrowth:standardDev,standard deviation in kg for a group,Farm Data Standards
+,timeOffFeed,urn:nzl:pri:observ:feedgrowth:timeOffFeed,ISO 8610 period (hours/minutes),Farm Data Standards
+,pre-weaningGroup,urn:nzl:pri:observ:feedgrowth:preweanGroup,"The act of removing young animals from
+being able to access milk. This causes a
+change in diet.",Farm Data Standards
+,numberWeaned,urn:nzl:pri:observ:feedgrowth:noWeaned,count of progeny weaned,Farm Data Standards
+,AnimalID,urn:nzl:pri:observ:feedgrowth:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,weight,urn:nzl:pri:observ:feedgrowth:weight,Animal weight in kg,Farm Data Standards
+,feedCategory,urn:nzl:pri:observ:feedgrowth:feedCategory,enumeration list see B.8 Animal Standard,Farm Data Standards
+,feedName,urn:nzl:pri:observ:feedgrowth:feedname,enumeration list see B.8 Animal Standard,Farm Data Standards
+,crudeProtein,urn:nzl:pri:observ:feedgrowth:crudeProtein,weight in kg/kg DM,Farm Data Standards
+,digestibility,urn:nzl:pri:observ:feedgrowth:digestibility,percentage of feed that is able to be digested,Farm Data Standards
+,metabolisableEnergy,urn:nzl:pri:observ:feedgrowth:metabEnergy,MJ ME/kg DM,Farm Data Standards
+,feedAllowancePerHead,urn:nzl:pri:observ:feedgrowth:feedAllowPerHd,kg DM per head,Farm Data Standards
+,sourcePaddock,urn:nzl:pri:observ:feedgrowth:sourcePaddock,identifier of paddock animals were being removed,Farm Data Standards
+,residualPastureCover,urn:nzl:pri:observ:feedgrowth:residualPastCov,kg DM/hectare remaining in the source paddock,Farm Data Standards
+,destinationPaddock,urn:nzl:pri:observ:feedgrowth:destPaddock,identifier of paddock which animals were being placed,Farm Data Standards
+,destinationPastureCover,urn:nzl:pri:observ:feedgrowth:destPaddockCov,kg DM/hectare in the destination paddock,Farm Data Standards
+,changePaddockTally,urn:nzl:pri:observ:feedgrowth:changePadTally,count of animals involved,Farm Data Standards
+,draft,urn:nzl:pri:observ:feedgrowth:draft,Records that an animal was drafted in a certain direction (out a gate) or moved to another group.,Farm Data Standards
+,measurementType,urn:nzl:pri:observ:feedgrowth:measureType,"Records miscellaneous measurements made
+on an animal.",Farm Data Standards
+,measurement,urn:nzl:pri:observ:feedgrowth:measure,"Records miscellaneous measurements made
+on an animal.",Farm Data Standards
+,measurementUnit,urn:nzl:pri:observ:feedgrowth:measureUnit,"Records miscellaneous measurements made
+on an animal.",Farm Data Standards
+observation.Reproduction,AnimalID,urn:nzl:pri:observ:repro:AnimalID,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,sireID,urn:nzl:pri:observ:repro:sireID,URN animal identifier,Farm Data Standards
+,sireTally,urn:nzl:pri:observ:repro:sireTally,number of sires,Farm Data Standards
+,damTally,urn:nzl:pri:observ:repro:damTally,number of dams,Farm Data Standards
+,damRatio,urn:nzl:pri:observ:repro:damRatio,ratio dam per sire,Farm Data Standards
+,teaserUsed,urn:nzl:pri:observ:repro:teaserUsed,boolen: True if teaser is used,Farm Data Standards
+,intendedExitDate,urn:nzl:pri:observ:repro:intendedExitDate,ISO 8610 date of intended separation of sires and dams,Farm Data Standards
+,matingMethod,urn:nzl:pri:observ:repro:matingMethod,"enumeration: Natural, AI, Sexed Semen AI",Farm Data Standards
+,ArtificialInseminationSireID,urn:nzl:pri:observ:repro:aiSireID,URN,Farm Data Standards
+,strawID,urn:nzl:pri:observ:repro:strawID,ICAR identifier preferred,Farm Data Standards
+,embryoDonorID,urn:nzl:pri:observ:repro:embryoDonorID,URN animal identifier,Farm Data Standards
+,embryoSireID,urn:nzl:pri:observ:repro:embryoSireID,URN animal identifier,Farm Data Standards
+,embryoRecipientID,urn:nzl:pri:observ:repro:embryoRecipientID,URN animal identifier,Farm Data Standards
+,embryoImplantSerialNumber,urn:nzl:pri:observ:repro:embImplantSerialNo,identifier of the embryo,Farm Data Standards
+,collectionID,urn:nzl:pri:observ:repro:collectionID,collection identifier,Farm Data Standards
+,collectionCentreID,urn:nzl:pri:observ:repro:collectionCentreID,collection centre identifier,Farm Data Standards
+,oestrousDay,urn:nzl:pri:observ:repro:oestrousDay,day within oestrous cycle,Farm Data Standards
+,scanType,urn:nzl:pri:observ:repro:scanType,"enumeration: Short, Long",Farm Data Standards
+,equipmentModel,urn:nzl:pri:observ:repro:equipmentModel,text: make and model of equipment used for scanning.,Farm Data Standards
+,foetusCount,urn:nzl:pri:observ:repro:foetusCount,number of foetus scanned (can be zero).,Farm Data Standards
+,foetalAge,urn:nzl:pri:observ:repro:foetalAge,"gestation age in days from scanning ,where estimated.",Farm Data Standards
+,semenPH,urn:nzl:pri:observ:repro:semenPH,values between 3 and 9,Farm Data Standards
+,semenVolume,urn:nzl:pri:observ:repro:semenVolume,volume of semen in millilitres (ml),Farm Data Standards
+,semenMotility,urn:nzl:pri:observ:repro:semenMotility,,Farm Data Standards
+,forwardProgression,urn:nzl:pri:observ:repro:forwardProgression,score from 0 to 4 with + or - postfix,Farm Data Standards
+,semenConcentration,urn:nzl:pri:observ:repro:semenConcentration,expressed as 106/ml,Farm Data Standards
+,semenMorphology,urn:nzl:pri:observ:repro:semenMorphology,percentage of sperm with normal morphology,Farm Data Standards
+,whiteBloodCellCount,urn:nzl:pri:observ:repro:whiteBloodCellCount,expressed as 106/ml,Farm Data Standards
+,parturitionActualDate,urn:nzl:pri:observ:repro:partActualDate,"enumeration: Actual, Estimated",Farm Data Standards
+,abnormalBirthIndicator,urn:nzl:pri:observ:repro:abnBirthIndicator,"enumeration: Aborted, Induced, Premature",Farm Data Standards
+,assistanceIndicator,urn:nzl:pri:observ:repro:assistanceIndicator,"enumeration: Not Reported, Reported No Assistance, Minor Assistance, Major Assistance",Farm Data Standards
+,numberOfProgeny,urn:nzl:pri:observ:repro:numberOfProgeny,count of progeny,Farm Data Standards
+,progenyNumber,urn:nzl:pri:observ:repro:progenyNumber,ascending number allocated to each progeny recorded within a parturition observation,Farm Data Standards
+,birthFate,urn:nzl:pri:observ:repro:birthFate,"Singular, appplying to the offspring. enumeration list see B.3 Animal Standard",Farm Data Standards
+,damFate,urn:nzl:pri:observ:repro:damFate,"Can be multiple, applying to the birth event. enumeration list see B.3 Animal Standard",Farm Data Standards
+,progenyAnimalID,urn:nzl:pri:observ:repro:progenyAnimalId,urn:nzl:pri:animal:sil:<ID string>,Farm Data Standards
+,progenySex,urn:nzl:pri:observ:repro:progenySex,"enumeration: Male, Female",Farm Data Standards
+,progenyComment,urn:nzl:pri:observ:repro:progenyComment,string list see B.7 Animal Standard,Farm Data Standards
+observation.Health,AnimalID,urn:nzl:pri:observ:health:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,diagnosedBy,urn:nzl:pri:observ:health:diagnosedBy,name of person,Farm Data Standards
+,roleDiagnosedBy,urn:nzl:pri:observ:health:roleDiagnosedBy,"enumeration: Veterinarian, Farmer, Technician",Farm Data Standards
+,affectedPart,urn:nzl:pri:observ:health:affectedPart,enumeration list see B.9 Animal Standard,Farm Data Standards
+,diseaseCategory,urn:nzl:pri:observ:health:diseaseCategory,enumeration list see B.9 Animal Standard,Farm Data Standards
+,disease,urn:nzl:pri:observ:health:disease,disease name,Farm Data Standards
+,diseaseCode,urn:nzl:pri:observ:health:diseaseCode,enumeration list see B.9 Animal Standard,Farm Data Standards
+,diseaseStrain,urn:nzl:pri:observ:health:diseaseStrain,strain name,Farm Data Standards
+,treatedBy,urn:nzl:pri:observ:health:treatedBy,operator name who applied the health treatment,Farm Data Standards
+,healthProduct,urn:nzl:pri:observ:health:healthProd,trade name of the health product,Farm Data Standards
+,registrationNumber,urn:nzl:pri:observ:health:regNumber,ACVM registration number of product,Farm Data Standards
+,SKU,urn:nzl:pri:observ:health:sku,stock keeping unit barcode,Farm Data Standards
+,organicApprovedRemedy,urn:nzl:pri:observ:health:organicApprovedRem,"boolean: True if organic approved, default is false",Farm Data Standards
+,treatmentMethod,urn:nzl:pri:observ:health:treatmentMethod,Treatment Method is used in the Treatment observation in the Animal Health category.,Farm Data Standards
+,batchNumber,urn:nzl:pri:observ:health:batchNumber,batch number of product used,Farm Data Standards
+,expiryDate,urn:nzl:pri:observ:health:expiryDate,ISO date,Farm Data Standards
+,doseRate,urn:nzl:pri:observ:health:doseRate,dose that was administered,Farm Data Standards
+,doseUnits,urn:nzl:pri:observ:health:doseUnits,"amount of dosage expressed in ml, mg",Farm Data Standards
+,withholdingPeriodMeat,urn:nzl:pri:observ:health:whPeriodMeat,days,Farm Data Standards
+,withholdingPeriodMilk,urn:nzl:pri:observ:health:whPeriodMilk,days,Farm Data Standards
+,exportSlaughterInterval,urn:nzl:pri:observ:health:exportSlaughterInt,"days, minimum time between treatment and slaughter for export markets",Farm Data Standards
+,hormoneIndicator,urn:nzl:pri:observ:health:hormoneIndicator,flag (true/false) indicating that product applied contains a hormone growth promotant,Farm Data Standards
+,procedureType,urn:nzl:pri:observ:health:procedureType,enumeration list see B.11 Animal Standard,Farm Data Standards
+,procedureMethod,urn:nzl:pri:observ:health:procedureMethod,text,Farm Data Standards
+,surgeryProcedure,urn:nzl:pri:observ:health:surgeryProcedure,enumeration list: see ACVS list of surgical procedures (American College of Veterinary,Farm Data Standards
+,surgeryPart,urn:nzl:pri:observ:health:surgeryPart,enumeration list: see 2nd level of the ICAR diagnosis coding system,Farm Data Standards
+,surgeryOutcome,urn:nzl:pri:observ:health:surgeryOutcome,text: description of surgery outcome,Farm Data Standards
+,injuryType,urn:nzl:pri:observ:health:injuryType,"enumeration: Accident, Misadventure",Farm Data Standards
+,affectedPart,urn:nzl:pri:observ:health:affectedPart,enumeration list: see 2nd level of the ICAR diagnosis coding system,Farm Data Standards
+,injuryComment,urn:nzl:pri:observ:health:injuryComment,text: description of injury,Farm Data Standards
+observation.Test,AnimalID,urn:nzl:pri:observ:test:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,bloodTestType,urn:nzl:pri:observ:test:bloodTestType,enumeration list see B.12 Animal Standard,Farm Data Standards
+,bloodTestResult,urn:nzl:pri:observ:test:bloodTestResult,float,Farm Data Standards
+,bloodTestUnit,urn:nzl:pri:observ:test:bloodTestUnit,"enumeration: %, x103/µL, x106/µL, x109/µL, mg/dL, g/dL, g/L",Farm Data Standards
+,liverTestType,urn:nzl:pri:observ:test:liverTestType,enumeration list see B.13 Animal Standard,Farm Data Standards
+,liverTestResult,urn:nzl:pri:observ:test:liverTestResult,float,Farm Data Standards
+,liverTestUnit,urn:nzl:pri:observ:test:liverTestUnit,"enumeration: U/L, mg/dL, g/dL",Farm Data Standards
+,CT-Scan,urn:nzl:pri:observ:test:ctScan,to be developed - see B.1 Animal Standard,Farm Data Standards
+,MIR,urn:nzl:pri:observ:test:mir,to be developed - see B.1 Animal Standard,Farm Data Standards
+,recessiveGeneCondition,urn:nzl:pri:observ:test:recessiveGeneCond,text: description of gene condition,Farm Data Standards
+observation.Score,AnimalID,urn:nzl:pri:observ:score:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,scoreCondition,urn:nzl:pri:observ:score:scoreCond,Integer: score 1-9;,Farm Data Standards
+,scoreConditionEvent,urn:nzl:pri:observ:score:scoreCondEvent,"Enumeration: pre-parturition, premating, mating, weaning, not specific",Farm Data Standards
+,scoreOverallConformation,urn:nzl:pri:observ:score:scoreOverallConform,Integer: score 1-5;,Farm Data Standards
+,scoreFootrot,urn:nzl:pri:observ:score:scoreFootrot,Integer: score 1-5;,Farm Data Standards
+,scoreTeeth,urn:nzl:pri:observ:score:scoreTeeth,Integer: score 1-5;,Farm Data Standards
+,scoreDaggy,urn:nzl:pri:observ:score:scoreDaggy,Integer: score 1-5;,Farm Data Standards
+,scoreMothering,urn:nzl:pri:observ:score:scoreMothering,Integer: score 1-5;,Farm Data Standards
+,scoreVigour,urn:nzl:pri:observ:score:scoreVigour,Integer: score 1-5;,Farm Data Standards
+,scoreUdder,urn:nzl:pri:observ:score:scoreUdder,Integer: score 1-5;,Farm Data Standards
+,scoreFarmerOpinionTrait,urn:nzl:pri:observ:score:scoreFarmerOpTrait,enumeration list see B.21 Animal Standard,Farm Data Standards
+,farmerOpinionTrait,urn:nzl:pri:observ:score:farmerOpTrait,Integer: score 1-9;,Farm Data Standards
+,scoreConformation,urn:nzl:pri:observ:score:scoreConform,enumeration list see B.21 Animal Standard,Farm Data Standards
+,conformationTrait,urn:nzl:pri:observ:score:ConformTrait,Integer: score 1-9;,Farm Data Standards
+,scoreUdderConformation,urn:nzl:pri:observ:score:scoreUdderConform,enumeration list see B.21 Animal Standard,Farm Data Standards
+,udderConformationTrait,urn:nzl:pri:observ:score:udderConformTrait,Integer: score 1-9;,Farm Data Standards
+dna.ResultValues,AnimalID,urn:nzl:pri:dna:result:animalId,"URN identifier of an externally meaningful ID such as birthTag,currentTag, birthHerdCode etc.",Farm Data Standards
+,dnaTestResult,urn:nzl:pri:dna:result:dnaTestResult,,Farm Data Standards
+,dnaTestType,urn:nzl:pri:dna:result:dnaTestType,,Farm Data Standards
+,dnaTestSampleType,urn:nzl:pri:dna:result:dnaTestSampleType,,Farm Data Standards
+,dnaProbability,urn:nzl:pri:dna:result:dnaProbability,Calculated degree of probability resulting from dna test analysis. Percentage.,Farm Data Standards
+,dnaReliability,urn:nzl:pri:dna:result:dnaReliability,A statistic that predicts the variability in breeding values using the dna parentage. Effectively predicting dnaDataQuality. Percentage.,Farm Data Standards
+,dnaAgeOfDam,urn:nzl:pri:dna:result:dnaAgeOfDam,Age of dam as determined by dna sample.,Farm Data Standards
+,dnaBirthRank,urn:nzl:pri:dna:result:dnaBirthRank,The number of progeny born to the same dam in the same birth event.,Farm Data Standards
+,dnaRearingRank,urn:nzl:pri:dna:result:dnaRearingRank,A lamb can have several possible dams and hence could be part of different litter sizes e.g. if assigned to a dam with no other lambs would be a single but if assigned to a different dam might be a twin. The average rearing rank for the lamb is used.,Farm Data Standards
+,dnaBirthDate,urn:nzl:pri:dna:result:dnaBirthDate,Age is an important effect in breeding value analyses so a birth date is worked out from the size of the foetus at pregnancy scanning and stored as dna birth date. ,Farm Data Standards
+,dnaFPBirthDate,urn:nzl:pri:dna:result:dnaFpBirthDate,Same as dnaBirthDate effectively. FP refers to fitted pedigree.,Farm Data Standards
+,dnaDamId,urn:nzl:pri:dna:result:dnaDamId,Dam ID as determined by dna sample.,Farm Data Standards
+,dnaSireId,urn:nzl:pri:dna:result:dnaSireId,Sire ID as determined by dna sample.,Farm Data Standards
+,dnaAltSireId,urn:nzl:pri:dna:result:dnaAltSireId,"If the dna parentage has more than 1 sire qualifying as the sire, then the 2nd best sire /’alternate sire’ is stored as dnaAltSire.",Farm Data Standards
